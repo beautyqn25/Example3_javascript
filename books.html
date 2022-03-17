@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JQUERY ASSIGNMENT</title>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<style>
+    body {background-color: #000033;
+	      color:#FFFFFF;
+	      width:100%;
+	      opacity .3;}		  
+	a {color: #FFFFFF;
+	  }	   
+	h2 {color: #FFFFFF;}
+	    padding-left:30px;}		
+    #myMenu{ width:300px;
+             float:left;}              
+    #sideContent{ background-color:#3459F5;
+		          color: #FFFFFF;
+		          width:130px;
+                  position: right;
+				  margin: auto;
+                  padding:20px;
+                  float:left;}
+	
+</style>
+<script>
+ window:onload = getInfo;
+
+	      var bookList = "To Kill A Mocking Bird,The Great Gatsby," +
+                         "The Catcher in the Rye,Pride and Prejudice," +
+                         "A Time to Kill,The Fault in our Stars,In Cold Blood," +
+			             "Moby Dick,War and Peace,Ulysses,Hamlet,The Odyssey,";
+
+		  var fnameList = "Jessica,Mary,Stephanie,Jackson,Jesse,Paul,Walt,Patty," +
+		               "Susan,Don,Gabe,Sally,Lexi,Finn,Logan,Kate,Sophie,Ellie,";
+
+	$(function(){
+		$("#bookTitle").autocomplete({source: bookList.split(",")});
+    });
+	
+	$(function(){
+		$("#fname").autocomplete({source: fnameList.split(",")});
+    });
+    $( function() {
+         $( "#dateInput" ).datepicker({
+			numberOfMonths: [1,2],			
+		}); 
+    });
+      
+	function bookLog(){
+	
+	    console.log(document.getElementById("fname").value);
+		
+	   localStorage.setItem("myName", document.getElementById("fname").value);	
+	   
+	   localStorage.setItem("myBook", document.getElementById("bookTitle").value);	
+	   
+	   localStorage.setItem("myDate", document.getElementById("dateInput").value);	
+	}
+	
+	function getInfo(){
+	   
+	   document.getElementById("firstName").innerHTML = localStorage.getItem("myName");
+	   
+	   document.getElementById("bookName").innerHTML = localStorage.getItem("myBook");
+	   
+	   document.getElementById("dateRead").innerHTML = localStorage.getItem("myDate");
+	}
+	
+</script>
+</head>
+<body>
+	<nav>
+	<div id="navmenu">	
+	<ul>
+	    <li><a href="index.html"> Home </a></li>
+		<li><a href="books.html"> Books </a></li>
+		<li><a href="montana.html"> Montana </a></li>
+		<li><a href="fades.html"> Fades</a></li>
+	</ul>
+	</div>
+	</nav>
+	
+	<div id="Content" style="border: solid; width: 60%; height: 700px;
+                        margin: auto; padding: 50px">   
+	<h2>Book Log</h2>
+	<form id="bLog">	
+	<div class="ui-widget">
+		<label for="fname">Please enter your name: &nbsp;</label>
+		<input id="fname">
+	</div>
+	<br>
+	<br>
+	<div class="ui-widget">
+		<label for="bookTitle">Please enter your book title: &nbsp;</label>
+		<input id="bookTitle">
+	</div>
+		<br>
+    <div id="Content">
+       <p>
+       <label for="dateInput">Enter date read: &nbsp;</label>
+       <input type="text" id="dateInput">
+       </p>
+	</div>
+	<br>
+	<button onclick="bookLog()">Enter</button>
+	<br>
+	<br>
+	</form>
+	<div id="info">
+	 Book Log Information: 
+	 <br>
+	 <br>
+	 Name: <span id="firstName"></span>
+	 <br>
+	 <br>
+	 Book: <span id="bookName"></span>
+	 <br>
+	 <br>
+	 Date: <span id="dateRead"></span>
+	    </div>
+
+
+</body>
+</html>

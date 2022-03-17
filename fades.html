@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JQUERY ASSIGNMENT</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fades</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<style>
+    body{ background-color: #000033;
+	      color:#FFFFFF;
+	      width:100%;
+	      opacity .3;}
+		  
+	a{color: #FFFFFF;
+	padding:10px;}	
+	h1 {color: #FFFFFF;
+	padding-left:30px;}
+        #myMenu{width:300px;
+                float:left;}
+                
+        #sideContent{ background-color:#3459F5;
+		            color: #FFFFFF;
+		            width:130px;
+                    position: right;
+					margin: auto;
+                    padding:20px;
+                    float:left;}
+		form {padding:30px;}
+</style>
+<script>
+    //fade out   
+			$(function() {
+                $("#p1").mouseover(function() {
+                    $("#p2").fadeOut("3000");
+                });
+            });
+    //fade in
+            $(function() {
+                $("#p3").mouseover(function() {
+                    $("#p2").fadeIn("fast");
+                });
+            });
+	//slide up	
+		$(document).ready(function(){
+           $(".btn1").click(function(){
+              $("p4").slideUp();
+          });
+	//slide down
+         $(".btn2").click(function(){
+            $("p4").slideDown();
+            });
+          });
+</script>
+
+</head>
+<body>
+	<nav>
+	<div id="navmenu">	
+	<ul>
+	    <li><a href="index.html"> Home </a></li>
+		<li><a href="books.html"> Books </a></li>
+		<li><a href="montana.html"> Montana </a></li>
+		<li><a href="fades.html"> Fades</a></li>
+	</ul>
+	</div>
+	</nav>
+       <div id="Content" style="border: solid; width: 60%; height: auto;
+                        margin: auto; padding: 50px">  
+       <h2>Fades & Slides</h2>
+        <p4><img src="rain.jpg" alt="Rain Drops"></p4>
+         <br><br>
+           <button class="btn1">Slide up</button>
+           <button class="btn2">Slide down</button>
+<br><br>
+        <p id="p3">Hover to Show - Info</p><p id="p1">Hover to Hide - Info</p>
+        <div id="d1">
+        <p id="p2">
+                <strong>Holland Lake Falls</strong> is a 3.3 mile heavily trafficked out 
+				and back trail located near Condon, Montana that features a 
+				lake and is good for all skill levels. The trail offers a 
+				number of activity options and is best used from May until 
+				October. 
+              	<br>
+				<img src="hl.jpg" alt="Holland Lake"> <br>Holland Lake</img>
+				<br>
+			    <img src="mas.jpg" alt="Mt Aeneas"> <br>Mount Aeneas</img>
+	            <br> 
+                <strong>Mount Aeneas Summit Trail</strong> is a 6.2 mile moderately trafficked 
+				out and back trail located near Bigfork, Montana that features 
+				a lake and is rated as difficult. The trail is primarily used 
+				for hiking and is best used from May until October.
+			   </p>
+              
+       </div>        
+	</div>
+
+
+</body>
+</html>

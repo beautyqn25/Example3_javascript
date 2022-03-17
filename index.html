@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JQUERY ASSIGNMENT</title>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<link rel="stylesheet" href="/path/to/theme.default.css">
+<script type="text/javascript" src="/path/to/jquery-latest.js"></script>
+<script type="text/javascript" src="/path/to/jquery.tablesorter.js"></script>
+
+<style>
+    body{ background-color: #000033;
+	      color:#FFFFFF;
+	      width:100%;
+	      opacity .3;}
+		  
+	a{color: #FFFFFF;}	
+	h1 {color: #FFFFFF;}
+        #myMenu{width:300px;
+                float:left;}
+                
+        #sideContent{ background-color:#3459F5;
+		            color: #FFFFFF;
+		            width:130px;
+                    position: right;
+					margin: auto;
+                    padding:20px;
+                    float:left;}
+		#Content {}
+</style>
+  <script>
+  $( function() {
+    $( "#tabs" ).tabs();
+  } );
+$(function() {
+  $("#myTable").tablesorter();
+});
+  </script>
+</head>			
+<title>JQUERY Assignment</title>
+<body>
+	<nav>
+	<div id="navmenu">	
+	<ul>
+	    <li><a href="index.html"> Home </a></li>
+		<li><a href="books.html"> Books </a></li>
+		<li><a href="montana.html"> Montana </a></li>
+		<li><a href="fades.html"> Fades</a></li>
+	</ul>
+	</div>
+	</nav>
+     <div id="Content" style="border: solid; width: 60%; height: auto;
+                        margin: auto; padding: 50px">
+	<h3>Tabs</h3>
+     <div id="tabs">
+  <ul>
+    <li><a href="#tabs-1">Flathead Lake</a></li>
+    <li><a href="#tabs-2">Holland Lake</a></li>
+    <li><a href="#tabs-3">Avalanche Lake</a></li>
+	<li><a href="#tabs-4">Whitefish Lake</a></li>
+  </ul>
+  <div id="tabs-1">
+    <img src="fl.jpg" alt="Flathead Lake"></img>
+	<br>
+	<h4>Flathead Lake - Polson, Mt</h4>
+	<p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. 
+	nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. 
+	Nunc tristique tempus lectus.</p>
+	
+  </div>
+  <div id="tabs-2">
+      <img src="hl.jpg" alt="Holland Lake"></img>
+	  <h4>Holland Lake<h4>
+    <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus 
+	gravida ante, ut pharetra massa metus id nunc. Duis scelerisque 
+	molestie turpis. Sed fringilla, massa eget luctus malesuada, 
+	metus eros molestie lectus, ut tempus eros massa ut dolor. </p>
+  </div>
+  <div id="tabs-3">
+      <img src="al.jpg" alt="Avalanche Lake"></img>
+	  <h4>Avalanche Lake<h4>
+    <p>Mauris eleifend est et turpis. Duis id erat. 
+	Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, 
+	mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non 
+	ante. Class aptent taciti sociosqu ad litora torquent per conubia </p>
+
+  </div>
+    <div id="tabs-4">
+	  <img src="wl.jpg" alt="Whitefish Lake"></img>
+	  <h4>Whitefish Lake<h4>
+ 
+<table id="myTable" class="tablesorter">
+  <thead>
+    <tr>
+      <th>Last Name &nbsp; </th>
+      <th>First Name &nbsp;</th>
+      <th>Email</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Miles</td>
+      <td>John</td>
+      <td>jmiles@gmail.com</td>
+
+    </tr>
+    <tr>
+      <td>Barry</td>
+      <td>Frank</td>
+      <td>fbarry@aol.com</td>
+
+    </tr>
+    <tr>
+      <td>Dodson</td>
+      <td>James</td>
+      <td>jdodson@yahoo.com</td>
+
+    </tr>
+    <tr>
+      <td>McDonald</td>
+      <td>Jim</td>
+      <td>mcdonaldj@msn.com</td>
+
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+</div>
+
+
+</div>
+</body>
+</html>
+

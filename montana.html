@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JQUERY ASSIGNMENT</title>
+ <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+ <link rel="stylesheet" href="/resources/demos/style.css">
+ <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+ <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+$(function(){
+
+$("#myMenu").accordion({collapsible:false,
+                        autoHeight:true,
+                        heightStyle:"content",
+                        event:"mouseover"});});
+</script>
+ <style>
+    body { background-color: #000033;
+	       color:#FFFFFF;
+	       width:100%;
+	       opacity .3;}
+		   
+	a { color: #FFFFFF;}	
+	
+    #myMenu{ width:300px;
+             float:left;}
+                
+    #sideContent{ background-color:#83B8F5;
+		          color: #FFFFFF;
+		          width:50%;
+                  position: right;
+				  margin: auto;
+                  padding:20px;
+                  float:right;}					
+</style>
+    </head>
+    <body>
+	<nav>
+	<div id="navmenu">	
+	<ul>
+	    <li><a href="index.html"> Home </a></li>
+		<li><a href="books.html"> Books </a></li>
+		<li><a href="montana.html"> Montana </a></li>
+		<li><a href="fades.html"> Fades</a></li>
+	</ul>
+	</div>
+	</nav>	
+	<br>		
+    </div>
+        <div id="Content" style="border: solid; width: 60%; height:1000px;
+                                 margin: auto; padding: 50px; background-color:#83B8F5;">
+    
+        <div id="sideContent">
+		   <p> <h2>Ghost Towns to Visit<h2>
+           
+                    All about the best <br>
+					Ghost towns to visit!
+            </p>
+        </div>  
+        <div id="sidebar1"><h2>All About Montana Adventures</h2>
+		
+            <div id="myMenu"><h3>Montana</h3>
+                <div>
+                    <p>Mt. Aeneas
+                    </p>
+                    <p>Avalanche Lake Trail
+                    </p>
+                </div><h3>Camping Spots</h3>
+                <div>
+                    <p>Tally Lake
+                    </p>
+                    <p>Rexford Bench
+                    </p>
+                </div><h3>National Parks</h3>
+				 <div>
+                   <p>Glacier
+                   </p>
+                   <p>Yellowstone
+                   </p>
+                </div>
+                <div>
+                    <p>
+                        <a href="https://www.nps.gov/glac/index.htm">Glacier National Park</a>
+                    </p>
+					<p>
+                        <a href="https://www.nps.gov/yell/index.htm">Yellowstone National Park</a>
+                    </p>
+					</div>
+                    <div>
+					   <p><h4> Crown of the Continent</h4>
+                         Come and experience Glacier's pristine forests, alpine meadows, 
+						rugged mountains, and spectacular lakes. With over 700 miles of trails, 
+						Glacier is a hiker's paradise for adventurous visitors seeking wilderness 
+						and solitude. Relive the days of old through historic chalets, lodges, 
+						and the famous Going-to-the-Sun Road. Explore Glacier National Park 
+						and discover what awaits you.</p>
+         
+                       <p><h4>Experience Yellowstone</h4> 
+                       An amazing experience awaits you here. In spring, plowing begins and roads 
+					   and services open for the season on a staggered schedule. Please check the 
+					   current conditions, operating seasons and hours, road conditions, and lodging 
+					   and eating options to help plan your visit as best as possible. 
+                        </p>
+                    </div>
+                    <p>GO EXPLORE!</p>
+                </div>
+            </div>
+		<br>
+
+        </div>
+
+    </body>
+</html>
+
